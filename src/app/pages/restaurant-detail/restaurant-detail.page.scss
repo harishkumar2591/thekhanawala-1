@@ -21,10 +21,11 @@ ion-content {
     }
     .img_div {
         height: 250px;
-    overflow: hidden;
+          overflow: hidden;
         img {
             width: -webkit-fill-available;
             min-height: 250px;
+            transform: translate(0px, -5%);
         }
         position: relative;
         .name_div {
@@ -433,6 +434,7 @@ ion-footer {
             color: var(--ion-color-white);
             font-size: 14px;
             font-family: "Poppins-Medium";
+            margin-bottom: 0;
             ion-icon {
                 margin-left: 5px;
             }

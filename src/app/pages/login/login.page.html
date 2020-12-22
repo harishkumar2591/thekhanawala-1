@@ -3,23 +3,27 @@
         <img [style.width.px]="innerWidth-50" src="assets/image/klogo.png" class="logo_img" />
         <!-- <h3 class="logo_text">{{"app_name" | translate}}</h3> -->
         <!-- <img src="assets/image/boy-img.png" class="boy_img ion-float-left" /> -->
-        <span class="ion-float-right">{{"login_page.title" | translate}}</span>
+        <!-- <span class="ion-float-right">{{"login_page.title" | translate}}</span> -->
     </div>
     <form>
         <ion-item lines="none" class="item_div">
             <ion-label position="stacked" class="lbl_name">{{"login_page.placeholder.email" | translate}}</ion-label>
-            <ion-input name="email" required type="email" [(ngModel)]="user.email">
-            </ion-input>
-        </ion-item>
+                <div class="form-border-input">
+                    <ion-input name="email" required type="email" [(ngModel)]="user.email">
+                    </ion-input>
+                </div>
+            </ion-item>
         <p class="err" *ngIf="err?.email">{{err?.email}}*</p>
         <ion-item lines="none" class="item_div">
             <ion-label position="stacked" class="lbl_name">{{"login_page.placeholder.password" | translate}}</ion-label>
-            <ion-input name="pass" [type]="!showPassword ? 'password' : 'text'" required type="Password"
-                [(ngModel)]="user.password">
-            </ion-input>
-            <ion-button (click)="showPassword = !showPassword" slot="end" class="trans-btn">
-                <ion-icon [name]="!showPassword ? 'eye' : 'eye-off'"></ion-icon>
-            </ion-button>
+            <div class="form-border-input">
+                <ion-input name="pass" [type]="!showPassword ? 'password' : 'text'" required type="Password"
+                    [(ngModel)]="user.password">
+                </ion-input>
+                <ion-button (click)="showPassword = !showPassword" slot="end" class="trans-btn">
+                    <ion-icon [name]="!showPassword ? 'eye' : 'eye-off'"></ion-icon>
+                </ion-button>
+            </div>
         </ion-item>
         <p class="err" *ngIf="err?.password">{{err?.password}}*</p>
         <ion-row>

@@ -1,54 +1,64 @@
 <ion-content>
     <div class="ion-text-center  logo_div">
         <img [style.width.px]="innerWidth-50" src="assets/image/klogo.png" class="logo_img" />
-        <img src="assets/image/boy-img.png" class="boy_img ion-float-left" />
-        <span class="ion-float-right">{{"register_page.title" | translate}}</span>
+        <!-- <img src="assets/image/boy-img.png" class="boy_img ion-float-left" /> -->
+        <!-- <span class="ion-float-right">{{"register_page.title" | translate}}</span> -->
     </div>
 
     <form>
         <ion-item lines="none" class="item_div">
             <ion-label position="stacked" class="lbl_name">{{"register_page.placeholder.name" | translate}}</ion-label>
-            <ion-input required type="text" name="username" [(ngModel)]="data.name"></ion-input>
+            <div class="form-border-input">
+                <ion-input required type="text" name="username" [(ngModel)]="data.name"></ion-input>
+            </div>
         </ion-item>
         <p class="err" *ngIf="err?.name">{{err?.name}}*</p>
 
         <ion-item lines="none" class="item_div">
             <ion-label position="stacked" class="lbl_name">{{"register_page.placeholder.email" | translate}}</ion-label>
-            <ion-input required type="text" name="email" [(ngModel)]="data.email">
-            </ion-input>
+            <div class="form-border-input">
+                <ion-input required type="text" name="email" [(ngModel)]="data.email">
+                </ion-input>
+            </div>
         </ion-item>
         <p class="err" *ngIf="err?.email">{{err?.email}}*</p>
 
         <ion-item lines="none" class="item_div">
             <ion-label position="stacked" class="lbl_name">{{"register_page.placeholder.password" | translate}}
             </ion-label>
-            <ion-input required [type]="!showPassword ? 'password' : 'text'" [(ngModel)]="data.password"
+            <div class="form-border-input">
+                <ion-input required [type]="!showPassword ? 'password' : 'text'" [(ngModel)]="data.password"
                 name="password">
-            </ion-input>
-            <ion-button (click)="showPassword = !showPassword" slot="end" class="trans-btn">
-                <ion-icon [name]="!showPassword ? 'eye' : 'eye-off'"></ion-icon>
-            </ion-button>
+                </ion-input>
+                <ion-button (click)="showPassword = !showPassword" slot="end" class="trans-btn">
+                    <ion-icon [name]="!showPassword ? 'eye' : 'eye-off'"></ion-icon>
+                </ion-button>
+            </div>
         </ion-item>
         <p class="err" *ngIf="err?.password">{{err?.password}}*</p>
 
         <ion-item lines="none" class="item_div">
             <ion-label position="stacked" class="lbl_name">{{"register_page.placeholder.confirm_password" | translate}}
             </ion-label>
-            <ion-input required [type]="!showConfirmPassword ? 'password' : 'text'" name="confirmpassword"
+            <div class="form-border-input">
+                <ion-input required [type]="!showConfirmPassword ? 'password' : 'text'" name="confirmpassword"
                 [(ngModel)]="data.password_confirmation"></ion-input>
-            <ion-button (click)="showConfirmPassword = !showConfirmPassword" slot="end" class="trans-btn">
-                <ion-icon [name]="!showConfirmPassword ? 'eye' : 'eye-off'"></ion-icon>
-            </ion-button>
+                <ion-button (click)="showConfirmPassword = !showConfirmPassword" slot="end" class="trans-btn">
+                    <ion-icon [name]="!showConfirmPassword ? 'eye' : 'eye-off'"></ion-icon>
+                </ion-button>
+            </div>
         </ion-item>
         <p class="err" *ngIf="err?.password_confirmation">
             {{err?.password_confirmation}}*
         </p>
 
-        <ion-item lines="none" class="item_div">
+        <!-- <ion-item lines="none" class="item_div">
             <ion-label position="stacked" class="lbl_name">{{"register_page.placeholder.referral_code" | translate}}
             </ion-label>
-            <ion-input required type="text" name="username" [(ngModel)]="data.friend_code"></ion-input>
-        </ion-item>
+            <div class="form-border-input">
+                <ion-input required type="text" name="username" [(ngModel)]="data.friend_code"></ion-input>
+            </div>
+        </ion-item> -->
         <ion-button class="otp_btn signin_btn" mode="md" expand="full" shape="round" fill="solid" (click)="gotologin()">
             {{"register_page.sign_up_btn" | translate}}
         </ion-button>

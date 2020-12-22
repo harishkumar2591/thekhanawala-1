@@ -1,6 +1,6 @@
 <ion-content [scrollEvents]="true" (ionScroll)="logScrolling($event)">
     <ion-header no-border>
-        <ion-toolbar [style.backgroundColor]="state == 1 ? '' : 'rgba(0,0,0,0.7)'" mode="md">
+        <ion-toolbar [style.backgroundColor]="state == 1 ? '' : 'linear-gradient(2deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8))'" mode="md">
             <ion-buttons slot="start">
                 <ion-back-button defaultHref="home" icon="ios-arrow-back" text=""></ion-back-button>
             </ion-buttons>
@@ -10,7 +10,7 @@
                     </ion-icon>
                     <ion-icon class="bookmark-icon" *ngIf="data?.isSeved" src="../../../assets/icon-image/bookmark-icon.svg">
                     </ion-icon>
-                </ion-button>
+                </ion-button> 
             </ion-buttons>
         </ion-toolbar>
     </ion-header>

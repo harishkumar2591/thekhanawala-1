@@ -194,6 +194,10 @@ ion-content {
              :nth-child(odd) {
                 padding-left: 0px;
             }
+            
+        }
+        ion-row.md.hydrated:last-child {
+            margin-bottom: 60px;
         }
         ion-col {
             position: relative;
@@ -565,3 +569,6 @@ ion-skeleton-text.ptitle {
 ion-skeleton-text.pprice {
     width: 40px;
 }
+
+
+

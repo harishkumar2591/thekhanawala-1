@@ -119,7 +119,7 @@
                         <span *ngIf="item?.sprice"> ${{item?.sprice}}</span>
                     </p>
                     <div class="ion-float-right btn_store">
-                        <ion-button fill="outline" *ngIf="item.qty == 0" class="ion-text-lowercase" (click)="addtocart(item)">
+                        <ion-button fill="outline" *ngIf="item.qty == 0" class="ion-text-uppercase" (click)="addtocart(item)">
                             {{'restaurant_detail_page.add' | translate}}
                             <!-- <ion-icon name="add"></ion-icon> -->
                         </ion-button>

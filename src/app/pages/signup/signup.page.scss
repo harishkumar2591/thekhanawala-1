@@ -12,11 +12,7 @@ ion-content {
       color: var(--ion-color-green);
       margin-top: 10px;
     }
-
-    .logo_img {
-      // height: 134px;
-    }
-
+  
     .boy_img {
       bottom: 0;
       left: 4px;
@@ -270,4 +266,8 @@ ion-content {
     }
   }
   background: #101082;
+}
+
+.button-native{
+  background: rgb(255, 167, 55);
 }

@@ -52,7 +52,15 @@ ion-card-subtitle ion-skeleton-text{
     padding: 5px;
     margin: 0;
 }
-.rating h3 ion-icon{
+
+.rating h3 ion-icon {
     margin-right: 5px;
     margin-bottom: -1px;
+}
+
+.heading {
+    h2 {
+        padding: 0 20px;
+        text-transform: capitalize;
+    }
 }

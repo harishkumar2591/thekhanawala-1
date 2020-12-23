@@ -83,20 +83,22 @@ ion-content {
   }
   .bill_detail {
     .bill_item {
-      font-size: 10px;
+      font-size: 12px;
       font-family: "Poppins-Medium";
       color: var(--ion-color-darkBlue);
+      margin-bottom: 5px;
     }
+    
     .total {
       color: #FFA737;
       font-size: 10px;
       font-family: "Poppins-Medium";
       border-bottom: dashed 1px var(--ion-border-color);
-      margin-bottom: 0px;
+      margin-bottom: 5px;
       padding-bottom: 10px;
     }
     .cancel_fee {
-      margin-bottom: 0px;
+      margin-bottom: 5px;
       padding-bottom: 10px;
       border-bottom: dashed 1px var(--ion-border-color);
     }
